@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ScreenState Snapshot App
+
+Welcome to the **ScreenState Snapshot App**, a cutting-edge web application designed to capture and render the latest state of your data-driven pages using the power of Next.js and server-side rendering (SSR).
+
+## Overview
+
+The ScreenState Snapshot App leverages the robust capabilities of Next.js to deliver a seamless and efficient experience for generating real-time snapshots of web pages. By utilizing server-side rendering, this application ensures that each page is fully rendered on the server before being sent to the client, providing instant readiness for automated tasks such as Selenium screengrabs.
+
+## Key Features
+
+- **Next.js Framework**: Built on top of Next.js, this application benefits from its powerful features, including automatic code splitting, optimized performance, and a simplified routing system.
+- **Server-Side Rendering (SSR)**: By rendering pages on the server, the app delivers fully-formed HTML to the client, ensuring fast load times and improved performance, especially for non-interactive pages.
+
+- **Firebase Integration**: Seamlessly integrates with Firebase Realtime Database to fetch and display the latest data, ensuring that your snapshots are always up-to-date.
+
+- **Modular Component Design**: Utilizes a `WidgetRenderer` component to efficiently render individual data items, promoting code reusability and maintainability.
+
+- **Automated Snapshot Capture**: Designed to work with automated tools like Selenium, enabling easy capture of page states for further processing or display on e-paper screens.
 
 ## Getting Started
 
@@ -35,13 +52,15 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-
 src/
 ├── app/
 │   ├── screenstate/
 │   │   ├── [screenstate]/
 │   │   │   └── page.tsx
 │   └── layout.tsx (if needed for global layout)
-├── firebase.js (Firebase setup)
+├── firebase.ts (Firebase setup)
 ├── styles/
-└── components/ (Optional for reusable widgets)
+├── components/
+│   └── WidgetRenderer.tsx (Reusable widgets)
+└── utils/ (Optional for utility functions)
+    └── helper.ts
